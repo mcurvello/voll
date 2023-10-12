@@ -5,6 +5,7 @@ import Main from "./Main";
 import Appointment from "./Appointment";
 import Explore from "./Explore";
 import Profile from "./Profile";
+import Register from "../Register";
 
 const Tab = createBottomTabNavigator();
 
@@ -39,6 +40,12 @@ const tabs = [
     id: 4,
     name: "Perfil",
     component: Profile,
+    icon: "user",
+  },
+  {
+    id: 5,
+    name: "Registro",
+    component: Register,
     icon: "user",
   },
 ];

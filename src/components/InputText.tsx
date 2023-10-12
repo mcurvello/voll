@@ -4,11 +4,15 @@ interface InputProps {
   label?: string;
   placeholder: string;
   secureTextEntry?: boolean;
+  value?: string;
+  onChangeText?: (text: string) => void;
 }
 export function InputText({
   label,
   placeholder,
   secureTextEntry = false,
+  value,
+  onChangeText,
 }: InputProps): JSX.Element {
   return (
     <FormControl mt={3}>
@@ -21,6 +25,8 @@ export function InputText({
         bgColor="gray.100"
         shadow={3}
         secureTextEntry={secureTextEntry}
+        value={value}
+        onChangeText={onChangeText}
       />
     </FormControl>
   );
