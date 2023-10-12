@@ -42,12 +42,6 @@ const tabs = [
     component: Profile,
     icon: "user",
   },
-  {
-    id: 5,
-    name: "Registro",
-    component: Register,
-    icon: "user",
-  },
 ];
 
 export default function Tabs() {

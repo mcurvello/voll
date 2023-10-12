@@ -25,7 +25,7 @@ export default function Login({ navigation }: any) {
       setLoading(false);
     }
     checkLogin();
-  }, []);
+  }, [email, password]);
 
   async function login() {
     const response = await createLogin(email, password);
@@ -38,7 +38,7 @@ export default function Login({ navigation }: any) {
       const pacienteId = tokenDecoded.id;
       AsyncStorage.setItem("pacienteId", pacienteId);
 
-      navigation.replace("Login");
+      navigation.replace("Tabs");
     } else {
       toast.show({
         title: "Erro ao fazer login",

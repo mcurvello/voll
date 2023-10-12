@@ -13,3 +13,13 @@ export async function createPatient(patient: IPatient) {
     return null;
   }
 }
+
+export async function getPatient(id: string) {
+  try {
+    const result = await api.get(`/paciente/${id}`);
+    return result.data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
