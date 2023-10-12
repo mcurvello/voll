@@ -23,3 +23,13 @@ export async function getPatient(id: string) {
     return null;
   }
 }
+
+export async function getAppointmentsPatient(id: string) {
+  try {
+    const result = await api.get(`/paciente/${id}/consultas`);
+    return result.data;
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+}
